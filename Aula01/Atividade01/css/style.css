@@ -9,26 +9,89 @@ body {
 }
 h1 {
     font-size: 50px;
-    margin: 50px;
+    top: 50px;
 }
+
+h2 {
+    font-size: 40px;
+}
+
 h3 {
     font-size: 20px;
     color:rgb(155, 155, 155);
-    margin: 0;
-    padding: 0;
+    padding: 12px;
+    bottom: 40px;
+}
+
+li {
+    padding: 0px;
+}
+
+.lista-1 {
+    margin: 0px;
+    padding: 20px;
+}
+
+.lista-2 {
+    margin: 0px;
+    padding:20px;
 }
 
 .header {
+    text-decoration: none;
     text-align: center;
-    padding: 20px;
+    padding: 0px;
 }
 .mais-esperados {
     display: flex;
     flex-direction: column;
     padding: 0px;
-    margin: 0px;
     text-align: center;
-    background-color: rgb(50, 50, 50);
+    bottom:20px;
+    background-color: rgb(49, 49, 49);
     color: white;
     text-decoration: none;
 }
+
+.bilheteria {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    text-decoration: none;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+
+.link {
+    padding: 20px 45px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    text-decoration: none;
+}
+
+
+.link:hover {
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                box-shadow 0.2s ease;
+    background-color: rgb(209, 209, 209);
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+    box-shadow: 0px 0px 30px rgb(124, 124, 124);
+    
+}
+
