@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-image: url('../img/designer.png');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding: 70px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    line-height: 0.8;
+}
+
+.header h2 {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.img-content {
+    background-image: url('../img/fundo-woman.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 250px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
+}
+
+.content {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 70px;
+}
+
+.content h2 {
+    font-size: 35px;
+}
+
+.content h3 {
+    color: #b8b8b8;
+    font-size: 15px;
+    letter-spacing: 4px;
+    font-weight: 200;
+}
+
+hr {
+    margin: 20px 650px;
+    border: 0.5px solid #dddddd;
+}
+
+.footer {
+    background-color: #e6e6e6;
+    padding: 100px;
+}
+
+.footer p {
+    color: #6d6d6d;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+.footer-background {
+    background-color: rgb(34, 34, 34);
+    height: 1050px;
+    align-items: center;
+    justify-items: center;
+    padding: 70px;
+}
+
+.conteiner-header {
+    background-color: rgb(22, 22, 22);
+    text-align: center;
+    height: 200px;
+    width: 1440px;
+}
+
+.conteiner-header h2 {
+    padding-top: 38px;
+    color:white;
+    font-size: 35px;
+}
+
+.conteiner-header h3 {
+    color: #b8b8b8;
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: 200;
+    padding-bottom: 38px;
+}
+
+.conteiner-header hr {
+    margin: 20px 650px;
+    border: 0.1px solid #4d4c4c;
+}
+
+.img {
+    background-image: url(../img/3\ de\ jul.\ de\ 2026\,\ 10_58_30.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
