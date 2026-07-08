@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 * {
@@ -13,7 +14,11 @@
     width: 100%;
     background-size: cover;
     background-position: center;
-    padding: 70px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 70px;
 }
 
 h1 {
@@ -34,6 +39,7 @@ h1 {
     background-image: url('../img/fundo-woman.jpg');
     background-size: cover;
     background-position: center;
+    height: 50vh;
     padding: 250px;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 1);
 }
@@ -55,9 +61,12 @@ h1 {
     font-weight: 200;
 }
 
-hr {
-    margin: 20px 650px;
-    border: 0.5px solid #dddddd;
+.content hr {
+    border: none;              /* Remove a borda e o sombreamento 3D */
+    height: 2px;               /* Define a espessura da linha */
+    background-color: #e6e6e6; /* Define a cor da linha */
+    width: 12%;                /* Define o tamanho horizontal da linha */
+    margin: 20px auto;         /* Centraliza a linha na página */
 }
 
 .footer {
@@ -74,21 +83,21 @@ hr {
 
 .footer-background {
     background-color: rgb(34, 34, 34);
-    height: 1050px;
     align-items: center;
     justify-items: center;
-    padding: 70px;
+}
+
+.conteiner {
+    padding: 100px 150px 100px;
 }
 
 .conteiner-header {
     background-color: rgb(22, 22, 22);
     text-align: center;
-    height: 200px;
-    width: 1440px;
+    padding: 50px 50px;
 }
 
 .conteiner-header h2 {
-    padding-top: 38px;
     color:white;
     font-size: 35px;
 }
@@ -98,17 +107,23 @@ hr {
     font-size: 12px;
     letter-spacing: 4px;
     font-weight: 200;
-    padding-bottom: 38px;
 }
 
 .conteiner-header hr {
-    margin: 20px 650px;
-    border: 0.1px solid #4d4c4c;
+    border: none;              /* Remove a borda e o sombreamento 3D */
+    height: 2px;               /* Define a espessura da linha */
+    background-color: #3d3d3d; /* Define a cor da linha */
+    width: 10%;                /* Define o tamanho horizontal da linha */
+    margin: 20px auto;         /* Centraliza a linha na página */
 }
 
-.img {
-    background-image: url(../img/3\ de\ jul.\ de\ 2026\,\ 10_58_30.png);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.galeria {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
