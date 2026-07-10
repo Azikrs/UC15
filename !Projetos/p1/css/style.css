@@ -654,7 +654,10 @@
 }
 
 .hero-audition h1 {
+    color: #181818;
+    font-weight: 570;
     font-size: 100px;
+    line-height: 1;
 }
 
 .hero-audition p {
@@ -662,6 +665,6 @@
     font-weight: 620;
     color: #767886;
     line-height: 1.35;
-    font-size: 22px;
+    font-size: 25px;
 }
 
