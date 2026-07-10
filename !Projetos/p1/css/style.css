@@ -169,7 +169,7 @@
     transform: scale(1);
     border: 1px solid #0066ff;
     background-color: transparent;
-    padding: 10px 10px;
+    padding: 10px 15px 7px;
     border-radius: 10px;
 }
 
@@ -531,6 +531,7 @@
 }
 
 .cardiac-freq {
+    background-image: linear-gradient(to top, #dddddd, #ffffff);
     margin-top: 175px;
 }
 
@@ -563,11 +564,11 @@
 
 .cardiac-footer p {
     font-size: 25px;
-    color: #808080;
-    font-weight: 500;
+    color: #717181;
+    font-weight: 600;
     letter-spacing: -1px;
     line-height: 1.2;
-    margin-bottom: 400px;
+    margin-bottom: 150px;
 }
 
 .cardiac-footer strong {
@@ -576,14 +577,91 @@
 }
 
 .airpods-fitness {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .fitness-img {
     overflow: hidden;
 }
 
-.fitness-img img {
+.desc-fit {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap:70px;
 }
+
+.app-fitness {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+
+.p-top {
+    display: flex;
+    flex-direction: column;
+    gap:28px;
+}
+
+.p1 {
+    letter-spacing: -1px;
+    font-weight: 620;
+    color: #767886;
+    line-height: 1.35;
+    font-size: 22px;
+    
+}
+
+.p1 strong{
+    font-weight: 600;
+    color: #222222;
+}
+
+.p2 {
+    letter-spacing: -0.8px;
+    font-weight: 500;
+    color: #6d6d7a;
+    font-size: 13px;
+}
+
+.p-bottom {
+    gap:30px;
+}
+
+.p3 strong{
+    color: #242424;
+}
+
+.p3 {
+    letter-spacing: -0.5px;
+    font-weight: 650;
+    color: #767886;
+    line-height: 1.35;
+    font-size: 17px;
+}
+
+.audition-helper {
+    margin-top: 200px;
+}
+
+.hero-audition {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.hero-audition h1 {
+    font-size: 100px;
+}
+
+.hero-audition p {
+    letter-spacing: -1px;
+    font-weight: 620;
+    color: #767886;
+    line-height: 1.35;
+    font-size: 22px;
+}
+
