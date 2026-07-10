@@ -7,6 +7,22 @@
     box-sizing: border-box;
 }
 
+hr {
+    border: none;              /* Remove a borda e o sombreamento 3D */
+    height: 1.5px;               /* Define a espessura da linha */
+    background-color: #0012b1; /* Define a cor da linha */
+    width: 40%;                /* Define o tamanho horizontal da linha */
+    margin: 20px auto;         /* Centraliza a linha na página */
+}
+
+.header h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: aliceblue;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
 .title {
     padding: 0px 150px 20px;
     line-height: 3.5rem;
@@ -41,15 +57,41 @@
 }
 
 .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #000264;
     width: 100%;
-    height: 120px;
+    height: 150px;
 }
 
 .footer {
+    justify-content: center;
+    align-items: center;
     background-color: #000264;
     width: 100%;
-    height: 120px;
+    height: 200px;
+}
+
+.footer {
+    transition: all 0.15s ease;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.footer img {
+    transition: all 0.15s ease;
+    filter: invert(100%);
+    width: 60px;
+    height: 60px;
+}
+
+.footer img:hover {
+    transition: all 0.15s ease;
+    opacity: 0.75;
+    scale: 1.20;
+    cursor: pointer;
 }
 
 .content {
@@ -58,6 +100,7 @@
 }
 
 .port-info {
+    background-color: rgb(255, 255, 255);
     padding: 100px 0px;
     justify-content: center;
     display: flex;
@@ -84,11 +127,106 @@
 }
 
 .bio {
-    padding: 50px 200px;
+    padding: 150px 350px;
     text-align: center;
 }
 
 .bio h2 {
-    font-weight: 300;
-    font-size: 100px;
+    color:#000157;
+    font-weight: 200;
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+.bio p {
+    margin-top: 50px;
+    color:#000157;
+    font-size:30px;
+    font-weight: 200;
+    line-height: 2.75rem;
+}
+
+@media screen and (max-width: 900px) {
+
+    p {
+        text-decoration: none;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+        gap: 30px;
+    }
+
+    .title {
+        text-align: center;
+        padding: 0 0 20px;
+        line-height: 1.2;
+    }
+
+    .title h1 {
+        font-size: 44px;
+    }
+
+    .title h2 {
+        font-size: 32px;
+    }
+
+    .info {
+        padding: 0 15px;
+    }
+
+    .info p {
+        font-size: 22px;
+    }
+
+    .bio {
+        padding: 60px 20px;
+    }
+
+    .bio h2 {
+        font-size: 42px;
+    }
+
+    .bio p {
+        font-size: 22px;
+        line-height: 2.2rem;
+    }
+
+    .footer {
+        gap: 18px;
+        padding: 20px 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header h2 {
+        font-size: 24px;
+    }
+
+    .title h1 {
+        font-size: 34px;
+    }
+
+    .title h2 {
+        font-size: 26px;
+    }
+
+    .info p {
+        font-size: 18px;
+    }
+
+    .bio h2 {
+        font-size: 32px;
+    }
+
+    .bio p {
+        font-size: 18px;
+        line-height: 1.8rem;
+    }
+
+    .footer img {
+        width: 48px;
+        height: 48px;
+    }
 }
