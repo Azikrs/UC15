@@ -140,28 +140,26 @@
 .button {
     margin-top:40px;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .shop-button {
     transition: all 0.2s ease;
     transform: scale(1);
     border: 1px solid rgba(0, 0, 0, 0);
-    font-size: 17px;
+    font-size: 16px;
     color: #fff;
-    background-color: #000000;
-    padding: 25px 150px;
-    border-radius: 50px;
-    font-weight: 500;
+    background-color: #0066ff;
+    padding: 10px 80px;
+    border-radius: 10px;
+    font-weight: 450;
 }
 
 .shop-button:hover  {
     cursor:pointer;
     transition: all 0.2s ease;
-    font-weight: 500;
-    color: black;
-
-    border: 1px solid black;
+    color: #0066ff;
+    border: 1px solid #0066ff;
     background-color: #00000000;
     transform: scale(1.03);
 }
@@ -169,30 +167,30 @@
 .description-viewer {
     transition: all 0.2s ease;
     transform: scale(1);
-    border: 1px solid #000000;
+    border: 1px solid #0066ff;
     background-color: transparent;
-    padding: 20px 20px;
-    border-radius: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
 }
 
 .description-viewer:hover {
     cursor:pointer;
     transition: all 0.2s ease;
     transform: scale(1.1);
-    border: 1px solid #000000;
-    background-color: #000000;
+    border: 1px solid #0066ff;
+    background-color: #0066ff;
 }
 
 .description-viewer img {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     transition: all 0.2s ease;
 }
 
 .description-viewer:hover img {
     transition: all 0.2s ease;
     transform: scale(1.1);
-    filter: invert(100%);
+    filter: brightness(0) invert(100%);
 }
 
 .description-viewer img.rotated {
@@ -575,4 +573,17 @@
 .cardiac-footer strong {
     color: #252525;
     font-weight: 600;
+}
+
+.airpods-fitness {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fitness-img {
+    overflow: hidden;
+}
+
+.fitness-img img {
 }
