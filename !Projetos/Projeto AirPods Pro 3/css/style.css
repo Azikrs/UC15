@@ -138,7 +138,7 @@ body {
     align-items: flex-end;
     padding: 100px;
     width: 100%;
-    height: 100vh;
+    height: 88vh;
     position: relative;
     overflow: hidden;
 }
@@ -149,9 +149,139 @@ body {
     position: absolute;
     top:0;
     left:0;
-    object-position: center;
+    object-position: bottom;
     object-fit: cover;
-    z-index: -1000;
+    z-index: -10;
+}
+
+.cancelamento-ruido {
+    background-image: url(../img/noise_hero__rhegsu0w6iiy_xlarge.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    padding: 100px;
+}
+
+.cancelamento-ruido h2 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.cancelamento-ruido h1 {
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: #fff;
+}
+
+.airpods-conteiner-compra {
+    padding: 100px 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f7;
+}
+
+.airpods-conteiner-conteudo {
+    max-width: 1500px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.airpods-conteiner-footer {
+    padding: 60px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.airpods-conteiner-footer-title {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.airpods-conteiner-footer-title h1 {
+    font-size: 80px;
+    font-weight: 600;
+    color: #1d1d1d;
+    letter-spacing: -1px;
+    line-height: 0.75;
+}
+
+.airpods-conteiner-footer-title p strong {
+    font-size: 28px;
+    letter-spacing: -1px;
+    font-weight: 550;
+    color: #2e2e2e;
+}
+
+.airpods-conteiner-footer-title p {
+    font-size: 20px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: #2e2e2e;
+}
+
+.airpods-anim {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.airpods-conteiner-video {
+    width: 1280px;
+    height: 50%;
+}
+
+.airpods-conteiner-botoes {
+    display: flex;
+    gap: 10px;
+}
+
+.airpods-conteiner-botoes a {
+    text-decoration: none;
+    padding:10px 14px;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.airpods-conteiner-botoes-ver-outros {
+    transition: 0.15s ease all;
+    border: 1px solid #0066ff;
+    background-color: #0066ff;
+    color: #fff;
+}
+
+.airpods-conteiner-botoes-ver-outros:hover {
+    transition: 0.15s ease all;
+    border: 1px solid #0066ff;
+    background-color: #fff;
+    color: #0066ff;
+}
+
+.airpods-conteiner-botoes-comprar {
+    transition: 0.15s ease all;
+    border: 1px solid #0066ff;
+    background-color: #fff;
+    color: #0066ff;
+}
+
+.airpods-conteiner-botoes-comprar:hover {
+    transition: 0.15s ease all;
+     border: 1px solid #0066ff;
+    background-color: #0066ff;
+    color: #fff;
+}
+
+
+.escute-a-ciencia {
+    background-image: linear-gradient(to top, #ffffff, #f5f5f7);
 }
 
 .titlecontent-2 {
@@ -268,6 +398,7 @@ body {
 .header-fixo.colado {
     top: 0;
     opacity: 1;
+    
 }
 
 .header-fixo-width {
@@ -1419,6 +1550,10 @@ body {
 
 @media screen and (max-width: 1400px) {
 
+    .airpods-conteiner-video {
+        width: 80%;
+    }
+
     .hero-audition h3 {
         font-size: 24px;
     }
@@ -1507,6 +1642,32 @@ body {
 }
 
 @media screen and (max-width: 1100px) {
+
+    .airpods-conteiner-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .airpods-conteiner-footer-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .airpods-conteiner-footer-title h1 {
+        font-size: 48px;
+    }
+
+    .airpods-conteiner-footer-title p {
+        font-size: 16px;
+    }
+
+    .airpods-conteiner-footer-title p strong {
+        display: none;
+    }
 
     .cards-ambiente-hero h1 {
         font-size: 20px;
@@ -1615,7 +1776,7 @@ body {
     }
 
     .hero-pagina-inicial h2 {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .titlecontent-2 h1 {
@@ -1762,6 +1923,43 @@ body {
 
 @media screen and (max-width: 700px) {
 
+    .airpods-conteiner-botoes a{
+        padding:5px 10px;
+        font-size: 12px;
+    }
+
+    .airpods-conteiner-compra {
+        padding: 50px 20px;
+    }
+
+    .airpods-conteiner-video {
+        margin-bottom: -30px;
+        height: 40vh;
+        width: 80%;
+    }
+
+    .airpods-conteiner-footer {
+    padding: 40px 20px;
+    display: flex;
+    }
+
+    .cancelamento-ruido {
+        display:flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cancelamento-ruido h1 {
+        font-size: 36px;
+        line-height: 1;
+    }
+
+    .cancelamento-ruido h2 {
+        font-size: 18px;
+    }
+
     .fitness-img img{
         height: 70vh;
     }
@@ -1770,9 +1968,21 @@ body {
         margin: -5px auto;
     }
 
-    .hero-pagina-inicial h1,.hero-pagina-inicial p {
+    .hero-pagina-inicial p {
         display: none;
+    }
 
+    .hero-pagina-inicial {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .hero-pagina-inicial h1 {
+        font-size: 24px;
+        max-width: 600px;
+        width: 70%;
+        margin: auto;
     }
 
     .header-nav-itens {
@@ -1792,12 +2002,33 @@ body {
         padding: 0 10px;
     }
 
-    .hero-pagina-inicial p {
-        font-size: 16px;
+    .conteudo-pagina-inicial {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-pagina-inicial h1 {
+        display: none;
+    }
+
+    .hero-pagina-inicial h2 {
+        font-size: 48px;
+    }
+
+    .back-video {
+        height: 120vh;
     }
 
     .botao-comprar-pagina-inicial {
         margin-bottom: 40px;
+    }
+
+    .botao-comprar-pagina-inicial a {
+        font-size: 16px;
+        padding: 10px 20px;
     }
 
     .titlecontent-2,
