@@ -191,3 +191,8 @@ function fecharModal(modal) {
     if (headerFixo) headerFixo.style.paddingRight = '';
   }, 500);
 }
+
+window.addEventListener('scroll', () => {
+  const s = document.querySelector('#secao-muda-cor'), h = document.querySelector('.header-fixo');
+  if (s && h) h.classList.toggle('modo-alternativo', s.getBoundingClientRect().top <= h.offsetHeight && s.getBoundingClientRect().bottom >= h.offsetHeight);
+});

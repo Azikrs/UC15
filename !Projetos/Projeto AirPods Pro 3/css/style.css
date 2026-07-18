@@ -504,24 +504,41 @@ body {
 }
 
 .header-fixo {
-    position: fixed;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff96;
-    z-index: 1000;
-    border-bottom: 1px solid #cfcfcf;
-    opacity: 0;
-    transition: top 0.4s ease, opacity 0.3s ease;
-    backdrop-filter: blur(10px);                 /* 1. O efeito de desfoque (blur) */
-    -webkit-backdrop-filter: blur(10px);         /* 2. Garante que funcione no Safari/iPhone */
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.623);
+  z-index: 1000;
+  border-bottom: 1px solid #adadad5e;
+  opacity: 0;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: top 0.4s ease, opacity 0.3s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.header-fixo.modo-alternativo {
+  background-color: rgba(24, 24, 24, 0.5);
+  border-bottom: 1px solid #5555557e;
+}
+
+.header-fixo.modo-alternativo h2, 
+.header-fixo.modo-alternativo li {
+  color: #ffffff;
+  border-color: #ffffff;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.header-fixo.modo-alternativo a {
+  color: #e6e6e6!important;
+  transition: color 0.2s ease;
 }
 
 .header-fixo.colado {
-    top: 0;
-    opacity: 1;
-    
+  top: 0;
+  opacity: 1;
 }
+
 
 .header-fixo-width {
     max-width: 1350px;
@@ -563,7 +580,7 @@ body {
 .header-nav-itens a {
     transition: 0.15s ease all;
     text-decoration: none;
-    color: #505050;
+    color: #3d3d3d;
 }
 
 .header-nav-itens a:hover {
@@ -982,7 +999,6 @@ body {
 
 .airpods-cards {
     gap: 25px;
-
     display: flex;
     justify-content: center;
 }
@@ -2633,4 +2649,15 @@ body {
     line-height: 1.3;
     color: #727272;
     font-weight: 550;
+}
+
+img {
+  /* Impede o usuário de arrastar a imagem com o mouse */
+  user-select: none;
+  -webkit-user-drag: none;
+  
+  /* Impede o usuário de selecionar a imagem na tela */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
