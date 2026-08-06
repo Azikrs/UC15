@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+img {
+  /* Impede o usuário de arrastar a imagem com o mouse */
+  user-select: none;
+  -webkit-user-drag: none;
+  
+  /* Impede o usuário de selecionar a imagem na tela */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.pagina-inicial {
+    background-image: url("../img/fundo shopping.png");
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+.pagina-inicial-cabecalho {
+    margin-top: 10px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 200px;
+    background-color: #ffffffc2;
+    backdrop-filter: blur(8px);
+}
+
+.pagina-inicial-cabecalho img {
+    display: block;
+    width: 120px;
+    height: auto;
+    border-radius: 100px;
+}
+
+.pagina-inicial-cabecalho-nav ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.pagina-inicial-cabecalho-nav a {
+    text-decoration: none;
+    color: #535353;
+    font-weight: 550;
+    letter-spacing: -0.5px;
+}
+
+.pagina-inicial-cabecalho-botao {
+    padding: 10px 15px;
+    border-radius: 100px;
+    background-color: #0B4656;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.pagina-inicial-conteudo {
+    line-height: 1;
+    max-width: 50vw;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 200px;
+    margin-top: 100px;
+}
+
+.pagina-inicial-conteudo h1 {
+    font-family: "Playfair Display", serif;
+    line-height: 0.5;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 120px;
+    margin-bottom: 20px;
+}
+
+.pagina-inicial-conteudo h2 {
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: -1px;
+    font-weight: 700;
+    font-size: 100px;
+    color: #efff93cc;
+    margin-bottom: 20px;
+}
+
+.pagina-inicial-conteudo p {
+    line-height: 1.2;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.pagina-inicial-conteudo-botoes {
+    padding-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.pagina-inicial-conteudo-botoes button {
+    padding: 15px 25px;
+    border-radius: 100px;
+    border: none;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    border: 1px solid #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.pagina-inicial-conteudo-botao-secundario {
+    background-color: #ffffff;
+    color: #0B4656;
+}
+
+.pagina-inicial-conteudo-botao-principal {
+    background-color: #ffffff00;
+    color: #ffffff;
+}
+
+.americana-shopping-descricao {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.americana-shopping-descricao h1 {
+    padding: 100px 0px 0px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    line-height: 0.5;
+    font-weight: 300;
+    color: #0B4656;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.americana-shopping-descricao-cards {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.americana-shopping-descricao-cards-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.americana-shopping-imagem {
+    object-fit: cover;
+    height: 700px;
+    width: 1500px;
+    border-radius: 20px;
+}
+
+
+
+
+
