@@ -42,7 +42,7 @@ img {
     width: 80%;
     max-width: 1000px;
     border-radius: 200px;
-    background-color: #ffffffc2;
+    background-color: #ffffffaf;
     backdrop-filter: blur(8px);
 }
 
@@ -64,6 +64,12 @@ img {
     color: #535353;
     font-weight: 550;
     letter-spacing: -0.5px;
+    transition: all 0.15s ease;
+}
+
+.pagina-inicial-cabecalho-nav a:hover {
+    color: #0B4656;
+    transition: all 0.15s ease;
 }
 
 .pagina-inicial-cabecalho-botao {
@@ -74,8 +80,19 @@ img {
     font-weight: 500;
     letter-spacing: 0px;
     font-size: 12px;
+    border: 1px solid #0B4656;
     color: #ffffff;
     text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.pagina-inicial-cabecalho-botao:hover {
+    cursor: pointer;
+    background-color: #ffffff00;
+    color: #0B4656;
+    border: 1px solid #0B4656;
+    transform: scale(1.05);
+    transition: all 0.15s ease;
 }
 
 .pagina-inicial-conteudo {
@@ -84,7 +101,7 @@ img {
     width: 80%;
     display: flex;
     flex-direction: column;
-    padding: 100px 200px;
+    padding: 200px;
     margin-top: 100px;
 }
 
@@ -93,7 +110,7 @@ img {
     line-height: 0.5;
     font-weight: 500;
     color: #ffffff;
-    font-size: 120px;
+    font-size: 150px;
     margin-bottom: 20px;
 }
 
@@ -102,7 +119,7 @@ img {
     line-height: 1;
     letter-spacing: -1px;
     font-weight: 700;
-    font-size: 100px;
+    font-size: 120px;
     color: #efff93cc;
     margin-bottom: 20px;
 }
@@ -111,7 +128,7 @@ img {
     line-height: 1.2;
     font-family: "Google Sans", sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 24px;
     color: #ffffff;
     margin-bottom: 20px;
 }
@@ -131,16 +148,34 @@ img {
     border: 1px solid #ffffff;
     font-size: 20px;
     text-decoration: none;
-}
-
-.pagina-inicial-conteudo-botao-secundario {
-    background-color: #ffffff;
-    color: #0B4656;
+    transition: all 0.15s ease;
+    backdrop-filter: blur(0px);
+    opacity: 1;
 }
 
 .pagina-inicial-conteudo-botao-principal {
     background-color: #ffffff00;
     color: #ffffff;
+}
+
+.pagina-inicial-conteudo-botao-principal:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #0B4656;
+    transform: scale(1.05);
+    transition: all 0.15s ease;
+}
+
+.pagina-inicial-conteudo-botao-secundario {
+    background-color: #ffffff;
+    color: #0B4656;
+    
+}
+
+.pagina-inicial-conteudo-botao-secundario:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.15s ease;
 }
 
 .americana-shopping-descricao {
