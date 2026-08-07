@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
     margin: 0;
@@ -185,14 +186,37 @@ img {
     gap: 150px;
 }
 
+.americana-shopping-descricao-hero {
+    max-width: 1031px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+.americana-shopping-descricao-hero-legenda {
+    display: flex;
+    justify-content: space-between;
+}
+
+.americana-shopping-descricao-hero-legenda h2 {
+    font-family: "roboto mono", serif;
+    line-height: 0.5;
+    font-weight: 500;
+    color: #6e8100;
+    font-size: 12px;
+}
+
 .americana-shopping-descricao h1 {
-    padding: 100px 0px 0px;
     text-align: center;
     font-family: "Playfair Display", serif;
     line-height: 0.5;
     font-weight: 300;
+    letter-spacing: -3px;
     color: #0B4656;
-    font-size: 60px;
+    font-size: 90px;
     margin-bottom: 20px;
 }
 
@@ -217,7 +241,27 @@ img {
     border-radius: 20px;
 }
 
+.americana-shopping-lojas-hero {
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    gap:100px;
+    max-width: 1500px;
+    width: 80%;
+    margin: auto;
+    padding: 100px 0px;
+}
 
+.americana-shopping-lojas-hero-legenda {
+    display: flex;
+    justify-content: space-between;
+    font-size:12px;
+}
 
-
-
+.americana-shopping-descricao-cards-conteudo h2 {
+    font-family: "Playfair Display", serif;
+    line-height: 0.5;
+    font-weight: 500;
+    color: #0B4656;
+    font-size: 30px;
+}
