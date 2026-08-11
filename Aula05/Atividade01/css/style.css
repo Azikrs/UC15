@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
+}
+
+html {
+    scrollbar-gutter: stable;
 }
 
 img {
@@ -20,9 +25,480 @@ img {
   -ms-user-select: none;
 }
 
+/*------------ANIMAÇÕES-------------*/
+
+/* ========================================= */
+/*        ESTADO INICIAL                      */
+/* ========================================= */
+
+.botao-entrada {
+
+    opacity: 0;
+    transform:
+        translateY(55px)
+        scale(0.94);
+}
+
+
+/* ========================================= */
+/*        ESTADO ATIVO                        */
+/* ========================================= */
+
+.botao-entrada.show {
+
+    animation:
+        botao-entrada-suave
+        1.1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+}
+
+
+/* ========================================= */
+/*        ANIMAÇÃO                            */
+/* ========================================= */
+
+@keyframes botao-entrada-suave {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(55px)
+            scale(0.94);
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-line {
+    position: relative;
+    width: 1px;
+    height: 100%;
+    border: none;
+    background: transparent;
+    overflow: hidden;
+}
+
+.reveal-line::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0B4656;
+    transform: translateY(-50%) scaleY(0);
+    transform-origin: center;
+    opacity: 0;
+    transition:
+        transform 1.8s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.7s ease;
+}
+
+.reveal-line.show::after {
+    transform: translateY(-50%) scaleY(1);
+    opacity: 1;
+}
+
+.linha-animada {
+    width: 1000px;
+    height: 1px;
+    margin: auto;
+    background: #0B4656;
+    transform: scaleX(0);
+    transform-origin: center;
+    opacity: 0;
+    transition:
+        transform 1.8s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.7s ease;
+}
+
+.linha-animada.ativa {
+    transform: scaleX(1);
+    opacity: 1;
+}
+
+/* ========================================= */
+/*        HEADER FIXO — BASE                  */
+/* ========================================= */
+
+.pagina-inicial-cabecalho-fixo {
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    background-color: transparent;
+    height: 70px;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+
+/* ========================================= */
+/*        HEADER — ENTRADA                    */
+/* ========================================= */
+
+.pagina-inicial-cabecalho-fixo.header-show {
+    animation:
+        header-entrada
+        0.65s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+}
+
+
+/* ========================================= */
+/*        LOGO                                */
+/* ========================================= */
+
+.pagina-inicial-cabecalho-fixo > a:first-child {
+    opacity: 0;
+
+    transform:
+        translateY(-10px)
+        scale(0.96);
+}
+
+
+.pagina-inicial-cabecalho-fixo.header-show
+> a:first-child {
+
+    animation:
+        logo-entrada
+        0.55s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.08s
+        forwards;
+}
+
+
+/* ========================================= */
+/*        NAVEGAÇÃO                           */
+/* ========================================= */
+
+.pagina-inicial-cabecalho-fixo-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+
+/* ========================================= */
+/*        LINKS                               */
+/* ========================================= */
+
+.pagina-inicial-cabecalho-fixo-nav li {
+    opacity: 0;
+
+    transform:
+        translateY(-8px)
+        scale(0.98);
+}
+
+
+/* LINK 1 */
+
+.pagina-inicial-cabecalho-fixo.header-show
+.pagina-inicial-cabecalho-fixo-nav li:nth-child(1) {
+    animation:
+        link-entrada
+        0.45s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.15s
+        forwards;
+}
+
+
+/* LINK 2 */
+
+.pagina-inicial-cabecalho-fixo.header-show
+.pagina-inicial-cabecalho-fixo-nav li:nth-child(2) {
+    animation:
+        link-entrada
+        0.45s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.19s
+        forwards;
+}
+
+
+/* LINK 3 */
+
+.pagina-inicial-cabecalho-fixo.header-show
+.pagina-inicial-cabecalho-fixo-nav li:nth-child(3) {
+    animation:
+        link-entrada
+        0.45s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.23s
+        forwards;
+}
+
+
+/* LINK 4 */
+
+.pagina-inicial-cabecalho-fixo.header-show
+.pagina-inicial-cabecalho-fixo-nav li:nth-child(4) {
+    animation:
+        link-entrada
+        0.45s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.27s
+        forwards;
+}
+
+
+/* LINK 5 */
+
+.pagina-inicial-cabecalho-fixo.header-show
+.pagina-inicial-cabecalho-fixo-nav li:nth-child(5) {
+    animation:
+        link-entrada
+        0.45s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.31s
+        forwards;
+}
+
+
+/* ========================================= */
+/*        LINKS — ESTILO ORIGINAL             */
+/* ========================================= */
+
+.pagina-inicial-cabecalho-fixo-nav a {
+    text-decoration: none;
+    color: #ffffff;
+
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    font-size: 14px;
+
+    transition:
+        color 0.15s ease;
+}
+
+
+.pagina-inicial-cabecalho-fixo-nav a:hover {
+    color: #e2e2e2;
+}
+
+
+/* ========================================= */
+/*        BOTÃO                               */
+/* ========================================= */
+
+.pagina-inicial-cabecalho-fixo button {
+
+    border: none;
+    border-radius: 20px;
+
+    padding: 9px 15px;
+
+    color: #0B4656;
+    background-color: #fff;
+
+    cursor: pointer;
+
+    font-weight: 500;
+    letter-spacing: -0.75px;
+    font-size: 14px;
+
+    opacity: 0;
+
+    transform:
+        translateY(-8px)
+        scale(0.97);
+
+    /*
+       A transição fica somente no hover.
+       Não usamos transition: all.
+    */
+    transition:
+        background-color 0.15s ease,
+        transform 0.2s ease;
+}
+
+
+/* ========================================= */
+/*        BOTÃO — ENTRADA                     */
+/* ========================================= */
+
+.pagina-inicial-cabecalho-fixo.header-show
+button {
+
+    animation:
+        botao-header-entrada
+        0.5s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        0.36s
+        forwards;
+}
+
+
+/* ========================================= */
+/*        BOTÃO — HOVER                      */
+/* ========================================= */
+
+.pagina-inicial-cabecalho-fixo button:hover {
+
+    background-color: #dfdfdf;
+
+    transform:
+        scale(1.03);
+}
+
+
+/* ========================================= */
+/*        ANIMAÇÃO DO HEADER                  */
+/* ========================================= */
+
+@keyframes header-entrada {
+
+    0% {
+        opacity: 0;
+        transform:
+            translateY(-20px);
+    }
+
+    65% {
+        opacity: 0.9;
+        transform:
+            translateY(-2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ========================================= */
+/*        ANIMAÇÃO DO LOGO                    */
+/* ========================================= */
+
+@keyframes logo-entrada {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(-10px)
+            scale(0.96);
+    }
+
+    70% {
+        opacity: 1;
+
+        transform:
+            translateY(-1px)
+            scale(0.995);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* ========================================= */
+/*        ANIMAÇÃO DOS LINKS                  */
+/* ========================================= */
+
+@keyframes link-entrada {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(-8px)
+            scale(0.98);
+    }
+
+    65% {
+        opacity: 1;
+
+        transform:
+            translateY(-1px)
+            scale(0.998);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* ========================================= */
+/*        ANIMAÇÃO DO BOTÃO                   */
+/* ========================================= */
+
+@keyframes botao-header-entrada {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(-8px)
+            scale(0.97);
+    }
+
+    70% {
+        opacity: 1;
+
+        transform:
+            translateY(-1px)
+            scale(0.998);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+/*------------COMEÇO DO CSS-------------*/
+
 .pagina-inicial {
     background-image: url("../img/fundo shopping.png");
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -34,7 +510,9 @@ img {
     position: fixed;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+
+    /* ESCONDIDO ACIMA DA TELA */
+    transform: translate(-50%, -150%);
     z-index: 10;
     padding: 5px 10px;
     display: flex;
@@ -43,8 +521,16 @@ img {
     width: 80%;
     max-width: 1000px;
     border-radius: 200px;
-    background-color: #ffffffaf;
-    backdrop-filter: blur(8px);
+    background-color: #ffffffa4;
+    backdrop-filter: blur(4px);
+
+    /* ANIMAÇÃO */
+    transition:
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pagina-inicial-cabecalho.header-visivel {
+    transform: translate(-50%, 0);
 }
 
 .pagina-inicial-cabecalho img {
@@ -62,14 +548,15 @@ img {
 
 .pagina-inicial-cabecalho-nav a {
     text-decoration: none;
-    color: #535353;
-    font-weight: 550;
+    color: #0B4656;
+    font-weight: 500;
+    font-size: 14px;
     letter-spacing: -0.5px;
     transition: all 0.15s ease;
 }
 
 .pagina-inicial-cabecalho-nav a:hover {
-    color: #0B4656;
+    color: #0b4656c9;
     transition: all 0.15s ease;
 }
 
@@ -98,40 +585,45 @@ img {
 
 .pagina-inicial-conteudo {
     line-height: 1;
-    max-width: 50vw;
+    max-width: 2000px;
+    height: 60vh;
+    margin: auto;
     width: 80%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    padding: 200px;
     margin-top: 100px;
 }
 
 .pagina-inicial-conteudo h1 {
-    font-family: "Playfair Display", serif;
+    text-transform: uppercase;
     line-height: 0.5;
-    font-weight: 500;
+    font-weight: 700;
     color: #ffffff;
-    font-size: 150px;
-    margin-bottom: 20px;
+    font-size: 100px;
+    margin-bottom: 50px;
 }
 
 .pagina-inicial-conteudo h2 {
+    font-family: "Outfit", sans-serif;
     text-transform: uppercase;
     line-height: 1;
-    letter-spacing: -1px;
-    font-weight: 700;
-    font-size: 120px;
-    color: #efff93cc;
+    letter-spacing: 1px;
+    font-weight: 200;
+    font-size: 60px;
+    color: #feffff;
     margin-bottom: 20px;
 }
 
 .pagina-inicial-conteudo p {
-    line-height: 1.2;
+    line-height: 1.5;
     font-family: "Google Sans", sans-serif;
     font-weight: 400;
-    font-size: 24px;
+    max-width: 750px;
+    width: 80%;
+    font-size: 20px;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin: 30px 0px;
 }
 
 .pagina-inicial-conteudo-botoes {
@@ -147,7 +639,7 @@ img {
     font-weight: 500;
     letter-spacing: -0.5px;
     border: 1px solid #ffffff;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     transition: all 0.15s ease;
     backdrop-filter: blur(0px);
@@ -176,54 +668,136 @@ img {
 .pagina-inicial-conteudo-botao-secundario:hover {
     cursor: pointer;
     transform: scale(1.05);
+    background-color: #dbdbdb;
+    border-color: #dbdbdb;
     transition: all 0.15s ease;
 }
 
+.americana-shopping-estatisticas-card {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 50px;
+    background-color: #0b4656f3;
+    color: #ffffffd2;
+}
+
+.americana-shopping-estatisticas-card-conteudo-mobile {
+    display: none;
+}
+
+.americana-shopping-estatisticas-card-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 300px;
+}
+
+.americana-shopping-estatisticas-card > hr {
+    width: 1px;
+    height: auto;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Linha que será animada */
+
+.americana-shopping-estatisticas-card > hr::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transform: translateY(-50%) scaleY(0);
+    transform-origin: center;
+    opacity: 0;
+    transition:
+        transform 1.8s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.7s ease;
+}
+
+
+/* Linha aberta */
+
+.americana-shopping-estatisticas-card > hr.show::after {
+    transform: translateY(-50%) scaleY(1);
+    opacity: 1;
+}
+
+.americana-shopping-estatisticas-card-conteudo img {
+    filter: invert(1);
+}
 .americana-shopping-descricao {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: 100px;
 }
 
 .americana-shopping-descricao-hero {
-    max-width: 1031px;
-    width: 80%;
     display: flex;
     flex-direction: column;
-    gap: 100px;
     text-align: center;
-    padding: 100px 0px;
+    gap: 60px;
+    padding: 125px 0px 0px;
 }
 
-.americana-shopping-descricao-hero-legenda {
-    display: flex;
-    justify-content: space-between;
+.pagina-inicial-conteudo img {
+    display: none;
 }
 
-.americana-shopping-descricao-hero-legenda h2 {
-    font-family: "roboto mono", serif;
-    line-height: 0.5;
-    font-weight: 500;
-    color: #6e8100;
-    font-size: 12px;
-}
-
-.americana-shopping-descricao h1 {
+.americana-shopping-descricao-hero h1 {
     text-align: center;
     font-family: "Playfair Display", serif;
-    line-height: 0.5;
+    line-height: 0;
     font-weight: 300;
-    letter-spacing: -3px;
+    letter-spacing: -10px;
     color: #0B4656;
     font-size: 90px;
-    margin-bottom: 20px;
+}
+
+.americana-shopping-descricao-hero p {
+    letter-spacing: -0.5px;
+    margin-bottom: 30px;
+    line-height: 0;
+    font-family: 'roboto mono';
+    font-weight: 400;
+    font-size: 14px;
+    color: #0B4656;
+}
+
+.americana-shopping-descricao-hero h2 {
+    letter-spacing: -0.5px;
+    font-family: "Google Sans", sans-serif;
+    max-width: 1100px;
+    width: 90%;
+    margin: auto;
+    font-weight: 400;
+    font-size: 16px;
+    color: #5e5e5e;
+    padding: 40px 0px 0px;
+    line-height: 1.5;
+}
+
+.americana-shopping-descricao hr {
+    width: 1000px;
+    border: 1px solid #cecdcd;
 }
 
 .americana-shopping-descricao-cards {
     display: flex;
     justify-content: center;
     gap: 100px;
+    max-width: 1500px;
+    width: 90%;
 }
 
 .americana-shopping-descricao-cards-conteudo {
@@ -234,11 +808,56 @@ img {
     text-align: left;
 }
 
-.americana-shopping-imagem {
-    object-fit: cover;
-    height: 700px;
-    width: 1500px;
+.americana-shopping-descricao-cards-conteudo h3 {
+    font-family: "Playfair Display", serif;
+    line-height: 0.5;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: #0B4656;
+    font-size: 20px;
+}
+
+.americana-shopping-descricao-cards-conteudo p {
+    line-height: 1.2;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #5e5e5e;
+}
+
+.americana-shopping-descricao-cards-conteudo h2 {
+    font-family: "Playfair Display", serif;
+    line-height: 0.5;
+    font-weight: 500;
+    color: #0B4656;
+    font-size: 30px;
+}
+
+.americana-shopping-descricao-imagem {
+    margin: 75px 0px;
+    max-width: 1500px;
+    width: 90%;
     border-radius: 20px;
+    height: 50%;
+    max-height: 750px;
+    object-fit: cover;
+}
+
+.americana-shopping-lojas {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    justify-content: center;
+    margin: auto;
+}
+
+.americana-shopping-lojas-background {
+    position: relative;
+    z-index: 10;
+    margin: 100px 50px 0px 0px;
+    background-color: oklab(100% 0 -0.00011);
+    border-top-right-radius: 200px;
+
 }
 
 .americana-shopping-lojas-hero {
@@ -252,16 +871,652 @@ img {
     padding: 100px 0px;
 }
 
-.americana-shopping-lojas-hero-legenda {
-    display: flex;
-    justify-content: space-between;
-    font-size:12px;
+.americana-shopping-lojas-hero h2 {
+    letter-spacing: -0.5px;
+    line-height: 0;
+    font-family: 'roboto mono';
+    font-weight: 400;
+    font-size: 14px;
+    color: #0B4656;
 }
 
-.americana-shopping-descricao-cards-conteudo h2 {
+.americana-shopping-lojas-hero h1 {
+    line-height: 1.2;
+    letter-spacing: -9px;
     font-family: "Playfair Display", serif;
-    line-height: 0.5;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 100px;
     color: #0B4656;
-    font-size: 30px;
+
+}
+
+.americana-shopping-lojas-hero p {
+    max-width: 600px;
+    width: 90%;
+    color: #777777;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+}
+
+.americana-shopping-lojas button{
+    padding: 15px 5px;
+    width: 175px;
+    margin: auto;
+    border: none;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    border: 1px solid #0B4656;
+    background-color: #0B4656;
+    color: #feffff;
+    font-weight: 450;
+    border-radius: 100px;
+    transition: all 0.15s ease;
+}
+
+.americana-shopping-lojas button:hover {
+    background-color: #fff;
+    color: #0B4656;
+    transform: scale(1.03);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.americana-shopping-localizacao {
+    padding-top: 200px;
+    display: flex;
+    max-width: 1500px;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    gap: 100px;
+}
+
+.americana-shopping-localizacao-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 700px;
+    width: 80%;
+    text-align: left;
+}
+
+.americana-shopping-localizacao-hero h2 {
+    letter-spacing: -0.5px;
+    line-height: 0;
+    font-family: 'roboto mono';
+    font-weight: 400;
+    font-size: 14px;
+    color: #0B4656;
+}
+
+.americana-shopping-localizacao-hero h1 {
+    font-family: "Playfair Display", serif;
+    line-height: 1.5;
+    font-weight: 300;
+    letter-spacing: -10px;
+    color: #0B4656;
+    font-size: 120px;
+}
+
+.americana-shopping-localizacao-imagem-conteiner {
+    position: relative;
+    width: 500px;
+    height: 750px;
+    overflow: hidden;
+    border-radius: 15px;
+    object-position: center;
+    background-color: #0B4656;
+}
+
+.americana-shopping-localizacao-imagem-conteiner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 1;
+}
+
+.americana-shopping-localizacao-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+}
+
+.americana-shopping-localizacao-imagem-conteiner:hover::before {
+    opacity: 1;
+}
+
+.americana-shopping-localizacao-imagem-conteiner:hover .americana-shopping-localizacao-img {
+    transform: scale(1.06);
+    opacity: 0.55;
+    filter: brightness(0.7);
+}
+
+.americana-shopping-localizacao-imagem-conteudo {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+.americana-shopping-localizacao-imagem-conteudo h1 {
+    font-family: 'outfit';
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+.americana-shopping-localizacao-imagem-conteudo h1:hover {
+    text-decoration: underline;
+}
+
+.americana-shopping-localizacao-imagem-conteiner:hover .americana-shopping-localizacao-imagem-conteudo {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.americana-shopping-localizacao-imagem-conteudo > img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.americana-shopping-localizacao-imagem-conteudo > * {
+    position: relative;
+    z-index: 2;
+}
+
+.americana-shopping-localizacao-hero button{
+    padding: 15px 20px;
+    margin: auto;
+    border: none;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    border: 1px solid #0B4656;
+    background-color: #0B4656;
+    color: #feffff;
+    font-weight: 450;
+    border-radius: 100px;
+    transition: all 0.15s ease;
+}
+
+.americana-shopping-localizacao-hero p {
+    letter-spacing: -0.5px;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #5e5e5e;
+    line-height: 1.5;
+}
+
+.americana-shopping-localizacao-hero button:hover {
+    background-color: #fff;
+    color: #0B4656;
+    transform: scale(1.03);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 1400px) {
+
+    .pagina-inicial-cabecalho-fixo {
+        max-width: 1200px;
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    .pagina-inicial-conteudo h1 {
+        font-size: 80px;
+    }
+
+    .pagina-inicial-conteudo h2 {
+        font-size: 48px;
+    }
+
+    .pagina-inicial-conteudo p {
+        font-size: 18px;
+        max-width: 650px;
+    }
+
+    .americana-shopping-localizacao {
+        gap: 60px;
+    }
+
+    .americana-shopping-localizacao-hero h1 {
+        font-size: 90px;
+        letter-spacing: -6px;
+    }
+
+    .americana-shopping-localizacao-imagem-conteiner {
+        width: 420px;
+        height: 630px;
+    }
+
+    .americana-shopping-lojas-hero h1 {
+        font-size: 80px;
+        letter-spacing: -6px;
+    }
+
+    .americana-shopping-descricao-hero h1 {
+        font-size: 72px;
+        letter-spacing: -6px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .americana-shopping-localizacao-hero {
+        margin-top: -150px;
+    }
+
+    .americana-shopping-localizacao-hero h1 {
+        line-height: 01;
+    }
+
+    .americana-shopping-localizacao-hero button {
+        width: 480px;
+    }
+
+    .americana-shopping-descricao-hero {
+        max-width: 1500px;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .americana-shopping-descricao-hero h1{
+        font-size: 50px;
+    }
+
+    .americana-shopping-estatisticas-card-conteudo {
+        font-size: 8px;
+        letter-spacing: -1px;
+        font-weight: 550;
+        width: 200px;
+    }
+
+    .americana-shopping-estatisticas-card-conteudo-mobile{
+        display: block;
+    }
+
+    .americana-shopping-estatisticas-card-conteudo-desktop {
+        display: none;
+    }
+
+    .pagina-inicial-conteudo {
+        height: auto;
+        padding: 120px 0 80px;
+    }
+
+    .pagina-inicial-conteudo h1 {
+        font-size: 70px;
+        line-height: 0.9;
+    }
+
+    .pagina-inicial-conteudo h2 {
+        font-size: 42px;
+    }
+
+    .pagina-inicial-conteudo p {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .americana-shopping-descricao-cards {
+        flex-wrap: wrap;
+        gap: 40px 60px;
+    }
+
+    .americana-shopping-descricao-cards-conteudo {
+        max-width: 45%;
+    }
+
+    .americana-shopping-localizacao {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 120px;
+    }
+
+    .americana-shopping-localizacao-hero {
+        width: 90%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .americana-shopping-localizacao-hero p {
+        max-width: 650px;
+    }
+
+    .americana-shopping-lojas-hero h1 {
+        font-size: 64px;
+        letter-spacing: -4px;
+    }
+
+    .americana-shopping-lojas-hero p {
+        width: 100%;
+    }
+
+    .americana-shopping-localizacao-imagem-conteiner {
+        width: min(100%, 480px);
+        height: 620px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .pagina-inicial-cabecalho-fixo {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pagina-inicial-cabecalho-fixo-nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+
+    .pagina-inicial-cabecalho-fixo button {
+        display: none;
+    }
+
+    .pagina-inicial {
+        min-height: 100vh;
+    }
+
+    .pagina-inicial-cabecalho img {
+        width: 100px;
+    }
+
+    .pagina-inicial-cabecalho {
+        padding-right: 20px;
+    }
+
+    .pagina-inicial-cabecalho-nav ul {
+        gap: 10px;
+    }
+
+    .pagina-inicial-cabecalho button{
+        display: none;
+    }
+
+    .pagina-inicial-cabecalho-fixo > a:first-child img {
+        width: 100px;
+        height: auto;
+    }
+
+    .pagina-inicial-conteudo {
+        width: 80%;
+    }
+
+    .pagina-inicial-conteudo h1 {
+        font-size: 56px;
+        margin-bottom: 25px;
+    }
+
+    .pagina-inicial-conteudo h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .pagina-inicial-conteudo p {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+
+    .pagina-inicial-conteudo-botoes {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .americana-shopping-estatisticas-card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        gap: 35px;
+        justify-items: center;
+        padding: 100px 0px;
+    }
+
+    .americana-shopping-estatisticas-card > hr {
+        display: none;
+    }
+
+    .americana-shopping-estatisticas-card-conteudo {
+        display: flex;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .americana-shopping-descricao-hero h1 {
+        font-size: 56px;
+        letter-spacing: -4px;
+        line-height: 1.1;
+    }
+
+    .americana-shopping-descricao-hero h2 {
+        font-size: 15px;
+        width: 95%;
+        padding-top: 20px;
+    }
+
+    .americana-shopping-descricao-cards {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        width: 95%;
+        gap: 50px;
+    }
+
+    .linha-animada {
+        display: none;
+    }
+
+    .americana-shopping-descricao-cards-conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 50%;
+        text-align: center;
+    }
+
+    .americana-shopping-lojas-hero {
+        width: 90%;
+        padding: 80px 0;
+        gap: 40px;
+    }
+
+    .americana-shopping-lojas-hero h1 {
+        font-size: 48px;
+        letter-spacing: -3px;
+        line-height: 1.1;
+    }
+
+    .americana-shopping-localizacao {
+        max-width: 500px;
+        width: 70%;
+    }
+
+    .americana-shopping-localizacao-hero a{
+        display: none;
+    }
+    .americana-shopping-localizacao-hero p{
+        margin-bottom: 50px;
+    }
+
+    .americana-shopping-localizacao {
+        padding-top:50px;
+    }
+
+    .americana-shopping-localizacao-imagem-conteiner {
+        max-width: 500px;
+        width: 70%;
+    }
+
+    .americana-shopping-localizacao-hero h1 {
+        font-size: 60px;
+        letter-spacing: -3px;
+        line-height: 1.1;
+    }
+
+    .americana-shopping-localizacao-imagem-conteiner {
+        width: 100%;
+        max-width: 420px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .americana-shopping-descricao-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .americana-shopping-descricao-cards p{
+        font-size: 18px;
+    }
+
+    .americana-shopping-descricao-cards-conteudo {
+        max-width: 80vw;
+    }
+
+    .americana-shopping-estatisticas-card-conteudo-mobile{
+        display: none;
+    }
+
+    .americana-shopping-estatisticas-card-conteudo-desktop {
+        display: block;
+    }
+
+    .americana-shopping-estatisticas-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .americana-shopping-estatisticas-card-conteudo {
+        max-width: 250px;
+        width: 80%;
+        font-size: 18px;
+        line-height: 1;
+        gap: 20px;
+    }
+
+    .americana-shopping-estatisticas-card-conteudo img {
+        width: 70px;
+        height: auto;
+    }
+
+    .pagina-inicial-cabecalho-fixo {
+        display: none;
+    }
+
+    .pagina-inicial-conteudo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 200px;
+        padding: 0;
+    }
+
+    .pagina-inicial-conteudo img{
+        width: 250px;
+        margin: auto;
+    }
+
+    .pagina-inicial {
+        height: 0vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pagina-inicial-conteudo img {
+        display: block;
+    }
+
+    .pagina-inicial-conteudo h2,
+    .pagina-inicial-conteudo h1 {
+        display: none;
+    }
+
+    
+
+    .pagina-inicial-cabecalho-fixo-nav ul {
+        display: none;
+    }
+
+    .pagina-inicial-cabecalho,
+    .pagina-inicial-cabecalho-fixo {
+        width: 100%;
+        border-radius: 0;
+        padding: 12px 15px;
+    }
+
+    .pagina-inicial-conteudo {
+        text-align: center;
+    }
+
+    .pagina-inicial-conteudo h1 {
+        font-size: 42px;
+    }
+
+    .pagina-inicial-conteudo h2 {
+        font-size: 28px;
+    }
+
+    .pagina-inicial-conteudo p {
+        font-size: 15px;
+    }
+
+    .americana-shopping-descricao-hero h1 {
+        font-size: 42px;
+    }
+
+    .americana-shopping-lojas-hero h1 {
+        font-size: 36px;
+    }
+
+    .americana-shopping-localizacao-hero h1 {
+        font-size: 42px;
+    }
+
+    .americana-shopping-localizacao-imagem-conteiner {
+        height: 420px;
+    }
+
+    .pagina-inicial-conteudo-botoes button,
+    .americana-shopping-lojas button,
+    .americana-shopping-localizacao-hero button {
+        width: 100%;
+    }
 }
