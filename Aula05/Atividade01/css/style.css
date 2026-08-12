@@ -522,7 +522,7 @@ button {
     width: 80%;
     max-width: 1000px;
     border-radius: 200px;
-    background-color: #12596da6;
+    background-color: #f3f3f380;
     backdrop-filter: blur(4px);
 
     /* ANIMAÇÃO */
@@ -539,7 +539,6 @@ button {
     width: 120px;
     height: auto;
     border-radius: 100px;
-    filter: brightness(100);
 }
 
 .pagina-inicial-cabecalho-nav ul{
@@ -550,7 +549,7 @@ button {
 
 .pagina-inicial-cabecalho-nav a {
     text-decoration: none;
-    color: #ffffff;
+    color: #0b4656;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.5px;
@@ -558,21 +557,21 @@ button {
 }
 
 .pagina-inicial-cabecalho-nav a:hover {
-    color: #0b46564d;
+    color: #0b465680;
     transition: all 0.15s ease;
 }
 
 .pagina-inicial-cabecalho-botao {
     padding: 10px 15px;
     border-radius: 100px;
-    background-color: #ffffff;
+    background-color: #0b4656;
     border: none;
     font-weight: 600;
     letter-spacing: 0px;
     font-size: 14px;
     letter-spacing: -1px;
-    border: 1px solid #ffffff;
-    color: #0b5164a1;
+    border: 1px solid #0b4656;
+    color: #ffffffd8;
     text-decoration: none;
     transition: all 0.15s ease;
 }
@@ -580,8 +579,8 @@ button {
 .pagina-inicial-cabecalho-botao:hover {
     cursor: pointer;
     background-color: #ffffff00;
-    color: #ffffff;
-    border: 1px solid #ffffff;
+    color: #0b4656;
+    border: 1px solid #0b4656;
     transform: scale(1.03);
     transition: all 0.15s ease;
 }
