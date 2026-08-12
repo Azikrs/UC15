@@ -124,10 +124,11 @@ img {
 }
 
 .linha-animada {
-    width: 1000px;
-    height: 1px;
-    margin: auto;
-    background: #0B4656;
+    max-width: 1000px;
+    width: 60%;
+    height:1px;
+    margin: 40px auto 20px;
+    background: #0b4656;
     transform: scaleX(0);
     transform-origin: center;
     opacity: 0;
@@ -521,7 +522,7 @@ button {
     width: 80%;
     max-width: 1000px;
     border-radius: 200px;
-    background-color: #ffffffa4;
+    background-color: #12596da6;
     backdrop-filter: blur(4px);
 
     /* ANIMAÇÃO */
@@ -538,6 +539,7 @@ button {
     width: 120px;
     height: auto;
     border-radius: 100px;
+    filter: brightness(100);
 }
 
 .pagina-inicial-cabecalho-nav ul{
@@ -548,7 +550,7 @@ button {
 
 .pagina-inicial-cabecalho-nav a {
     text-decoration: none;
-    color: #0B4656;
+    color: #ffffff;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: -0.5px;
@@ -556,20 +558,21 @@ button {
 }
 
 .pagina-inicial-cabecalho-nav a:hover {
-    color: #0b4656c9;
+    color: #0b46564d;
     transition: all 0.15s ease;
 }
 
 .pagina-inicial-cabecalho-botao {
     padding: 10px 15px;
     border-radius: 100px;
-    background-color: #0B4656;
+    background-color: #ffffff;
     border: none;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0px;
-    font-size: 12px;
-    border: 1px solid #0B4656;
-    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: -1px;
+    border: 1px solid #ffffff;
+    color: #0b5164a1;
     text-decoration: none;
     transition: all 0.15s ease;
 }
@@ -577,10 +580,24 @@ button {
 .pagina-inicial-cabecalho-botao:hover {
     cursor: pointer;
     background-color: #ffffff00;
-    color: #0B4656;
-    border: 1px solid #0B4656;
-    transform: scale(1.05);
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    transform: scale(1.03);
     transition: all 0.15s ease;
+}
+
+.hr-lojas-768 {
+    width: 60vw;
+    margin: 150px auto 75px;
+    border: 1px solid #0000002c;
+    display: none;
+}
+
+.hr-localizacao-768 {
+    width: 60vw;
+    margin: 120px auto 75px;
+    border: 1px solid #0000002c;
+    display: none;
 }
 
 .pagina-inicial-conteudo {
@@ -757,16 +774,16 @@ button {
 .americana-shopping-descricao-hero h1 {
     text-align: center;
     font-family: "Playfair Display", serif;
-    line-height: 0;
+    line-height: 0.75;
     font-weight: 300;
     letter-spacing: -10px;
     color: #0B4656;
-    font-size: 90px;
+    font-size: 110px;
 }
 
 .americana-shopping-descricao-hero p {
+    margin: 60px 0px 20px;
     letter-spacing: -0.5px;
-    margin-bottom: 30px;
     line-height: 0;
     font-family: 'roboto mono';
     font-weight: 400;
@@ -834,11 +851,11 @@ button {
 }
 
 .americana-shopping-descricao-imagem {
-    margin: 75px 0px;
-    max-width: 1500px;
-    width: 90%;
-    border-radius: 20px;
-    height: 50%;
+    margin: 0px 0px 50px;
+    max-width: 1620px;
+    width: 85%;
+    border-radius: 10px;
+    height: 90vh;
     max-height: 750px;
     object-fit: cover;
 }
@@ -846,9 +863,9 @@ button {
 .americana-shopping-lojas {
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
     justify-content: center;
     margin: auto;
+    padding: 0px 0px 100px;
 }
 
 .americana-shopping-lojas-background {
@@ -864,14 +881,14 @@ button {
     display:flex;
     flex-direction: column;
     text-align: left;
-    gap:100px;
-    max-width: 1500px;
-    width: 80%;
+    gap:75px;
+    max-width: 1620px;
+    width: 85%;
     margin: auto;
-    padding: 100px 0px;
+    padding: 150px 0px 50px;
 }
 
-.americana-shopping-lojas-hero h2 {
+.americana-shopping-lojas-hero p {
     letter-spacing: -0.5px;
     line-height: 0;
     font-family: 'roboto mono';
@@ -885,26 +902,28 @@ button {
     letter-spacing: -9px;
     font-family: "Playfair Display", serif;
     font-weight: 400;
-    font-size: 100px;
+    font-size: 120px;
     color: #0B4656;
 
 }
 
-.americana-shopping-lojas-hero p {
-    max-width: 600px;
-    width: 90%;
-    color: #777777;
+.americana-shopping-lojas-hero h2{
+    max-width: 750px;
+    width: 80%;
+    color: #5e5e5e;
+    line-height: 1.2;
     font-family: "Google Sans", sans-serif;
     font-weight: 400;
+    font-size: 18px;
     letter-spacing: -0.5px;
 }
 
 .americana-shopping-lojas button{
-    padding: 15px 5px;
-    width: 175px;
+    padding: 15px 0px;
+    width: 405px;
     margin: auto;
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: -0.5px;
     border: 1px solid #0B4656;
     background-color: #0B4656;
@@ -915,7 +934,7 @@ button {
 }
 
 .americana-shopping-lojas button:hover {
-    background-color: #fff;
+    background-color: #ffffff00;
     color: #0B4656;
     transform: scale(1.03);
     cursor: pointer;
@@ -923,13 +942,13 @@ button {
 }
 
 .americana-shopping-localizacao {
-    padding-top: 200px;
+    padding-top: 150px;
     display: flex;
     max-width: 1500px;
     width: 90%;
     margin: auto;
     justify-content: center;
-    gap: 100px;
+    gap: 175px;
 }
 
 .americana-shopping-localizacao-hero {
@@ -938,7 +957,6 @@ button {
     gap: 50px;
     max-width: 700px;
     width: 80%;
-    text-align: left;
 }
 
 .americana-shopping-localizacao-hero h2 {
@@ -956,13 +974,18 @@ button {
     font-weight: 300;
     letter-spacing: -10px;
     color: #0B4656;
-    font-size: 120px;
+    font-size: 130px;
+}
+
+.americana-shopping-localizacao-hero hr {
+    border: 1px solid #5e5e5e3d;
+    width: 85%;
 }
 
 .americana-shopping-localizacao-imagem-conteiner {
     position: relative;
-    width: 500px;
-    height: 750px;
+    width: 600px;
+    height: 900px;
     overflow: hidden;
     border-radius: 15px;
     object-position: center;
@@ -973,7 +996,7 @@ button {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(180deg, #0b465698 0%, rgba(0, 0, 0, 0.342) 100%);
     opacity: 0;
     transition: opacity 0.35s ease;
     z-index: 1;
@@ -993,8 +1016,8 @@ button {
 
 .americana-shopping-localizacao-imagem-conteiner:hover .americana-shopping-localizacao-img {
     transform: scale(1.06);
-    opacity: 0.55;
-    filter: brightness(0.7);
+    opacity: 1;
+    filter: brightness(1);
 }
 
 .americana-shopping-localizacao-imagem-conteudo {
@@ -1041,10 +1064,10 @@ button {
 }
 
 .americana-shopping-localizacao-hero button{
-    padding: 15px 20px;
+    padding: 20px 60px;
     margin: auto;
     border: none;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: -0.5px;
     border: 1px solid #0B4656;
     background-color: #0B4656;
@@ -1055,12 +1078,14 @@ button {
 }
 
 .americana-shopping-localizacao-hero p {
+    width: 700px;
     letter-spacing: -0.5px;
     font-family: "Google Sans", sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    color: #5e5e5e;
+    font-size: 18px;
+    color: #5e5e5ec4;
     line-height: 1.5;
+    
 }
 
 .americana-shopping-localizacao-hero button:hover {
@@ -1069,6 +1094,38 @@ button {
     transform: scale(1.03);
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.americana-shopping-localizacao-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 40px;
+    
+}
+
+.americana-shopping-localizacao-conteudo hr {
+    border: 1px solid #cecece65;
+    width: 100%;
+}
+
+.americana-shopping-localizacao-conteudo-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+}
+
+.americana-shopping-localizacao-conteudo-card h3{
+    color: #00000070;
+    font-size: 25px;
+}
+
+.americana-shopping-localizacao-conteudo-card p {
+    line-height: 1.2;
+    font-size: 16px;
+    width: 500px;
+    color: #3a3a3a;
 }
 
 body {
@@ -1223,6 +1280,19 @@ body {
 
 @media (max-width: 768px) {
 
+    .media768 {
+        display: none;
+    }
+
+    .hr-lojas-768 {
+        display: block;
+    }
+
+    .hr-localizacao-768 {
+        display: block;
+    }
+
+
     .pagina-inicial-cabecalho-fixo {
         align-items: center;
         display: flex;
@@ -1244,16 +1314,21 @@ body {
         min-height: 100vh;
     }
 
+    .americana-shopping-descricao-imagem {
+        display: none;
+    }
+
     .pagina-inicial-cabecalho img {
-        width: 100px;
+        width: 90px;
     }
 
     .pagina-inicial-cabecalho {
-        padding-right: 20px;
+        width: 90vw;
+        padding: 5px 10px;
     }
 
     .pagina-inicial-cabecalho-nav ul {
-        gap: 10px;
+        gap: 7px;
     }
 
     .pagina-inicial-cabecalho button{
@@ -1329,10 +1404,6 @@ body {
         gap: 50px;
     }
 
-    .linha-animada {
-        display: none;
-    }
-
     .americana-shopping-descricao-cards-conteudo {
         display: flex;
         flex-direction: column;
@@ -1342,8 +1413,8 @@ body {
     }
 
     .americana-shopping-lojas-hero {
-        width: 90%;
-        padding: 80px 0;
+        width: 80%;
+        padding: 50px 0;
         gap: 40px;
     }
 
@@ -1366,7 +1437,7 @@ body {
     }
 
     .americana-shopping-localizacao {
-        padding-top:50px;
+        padding-top:150px;
     }
 
     .americana-shopping-localizacao-imagem-conteiner {
@@ -1441,7 +1512,7 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 200px;
+        margin: 0;
         padding: 0;
     }
 
@@ -1451,7 +1522,7 @@ body {
     }
 
     .pagina-inicial {
-        height: 0vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1469,8 +1540,6 @@ body {
         display: none;
     }
 
-    
-
     .pagina-inicial-cabecalho-fixo-nav ul {
         display: none;
     }
@@ -1480,6 +1549,14 @@ body {
         width: 100%;
         border-radius: 0;
         padding: 12px 15px;
+    }
+
+    .pagina-inicial-cabecalho-logo img {
+        width: 50px;
+    }
+
+    .pagina-inicial-cabecalho a{
+        font-size: 12px;
     }
 
     .pagina-inicial-conteudo {
@@ -1513,10 +1590,8 @@ body {
     .americana-shopping-localizacao-imagem-conteiner {
         height: 420px;
     }
-
-    .pagina-inicial-conteudo-botoes button,
     .americana-shopping-lojas button,
     .americana-shopping-localizacao-hero button {
-        width: 100%;
+        width: 85%;
     }
 }

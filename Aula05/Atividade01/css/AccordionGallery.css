@@ -11,7 +11,7 @@
   gap: var(--ag-gap);
   width: 1600px;
   margin: 100px auto;
-  max-width: 90%;
+  max-width: 85%;
   perspective: 1400px;
   perspective-origin: 50% 50%;
 }
