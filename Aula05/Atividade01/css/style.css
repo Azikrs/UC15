@@ -752,8 +752,7 @@ button {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 100px;
-    background-image: linear-gradient(to bottom, #fff, #f3f5f5);
+    gap: 100px; 
 }
 
 .americana-shopping-descricao-hero {
@@ -1154,7 +1153,6 @@ button {
     max-width: 1000px;
     width: 80%;
     color: #5e5e5e;
-    font-family: "Google Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
     letter-spacing: -0.5px;
@@ -1171,18 +1169,18 @@ button {
   
     /* Substitua pelo caminho correto da sua imagem */
     background-image: url('../img/6035801-textura-de-fundo-quadrado-abstrato-branco-e-cinza-gratis-vetor.jpg');
-    
     /* Garante que a textura vai se repetir por todo o fundo */
     background-repeat: repeat;
-    
     /* Faz a mágica da mesclagem acontecer */
     background-blend-mode: multiply;
-    background-size: 700px; 
+    background-size: 1000px; 
 }
 
 .americana-shopping-gastronomia-conteudo h1{
-    letter-spacing: -4px;
-    font-weight: 600;
+    font-family: 'playfair display';
+    letter-spacing: -9px;
+    word-spacing: 7px;
+    font-weight: 200;
     font-size: 65px;
     color: #f3f5f5;
     text-align: center;
