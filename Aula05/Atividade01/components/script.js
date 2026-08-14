@@ -1,167 +1,114 @@
+// ========================================
+// 1. HEADER FIXO - Aparece ao sair da seção inicial
+// ========================================
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector(".pagina-inicial-cabecalho");
+    const segundaSecao = document.querySelector(".pagina-inicial");
 
-const header = document.querySelector(
-    ".pagina-inicial-cabecalho"
-);
-
-const segundaSecao = document.querySelector(
-    ".pagina-inicial"
-);
-
-const observer = new IntersectionObserver(
-    (entries) => {
-
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-
             if (entry.isIntersecting) {
-
-                // Entrou na segunda seção
-                header.classList.remove(
-                    "header-visivel"
-                );
-
+                header.classList.remove("header-visivel");
             } else {
-
-                // Saiu da segunda seção
-                header.classList.add(
-                    "header-visivel"
-                );
-
+                header.classList.add("header-visivel");
             }
-
         });
+    });
 
-    },
-);
-
-observer.observe(segundaSecao);
-
-const revealElements = document.querySelectorAll(".reveal");
-
-const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-
-        entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("show");
-
-                // Para de observar depois que apareceu
-                observer.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-    {
-        threshold: 0.15
-    }
-);
-
-
-revealElements.forEach((element) => {
-
-    revealObserver.observe(element);
-
+    observer.observe(segundaSecao);
 });
 
-const statisticLines = document.querySelectorAll(
-    ".americana-shopping-estatisticas-card > hr"
-);
-
-const lineObserver = new IntersectionObserver(
-    (entries, observer) => {
-
-        entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("show");
-
-                observer.unobserve(entry.target);
-
-            }
-
+// ========================================
+// 2. ANIMAÇÃO DE ENTRADA DO HEADER FIXO
+// ========================================
+document.addEventListener("DOMContentLoaded", function () {
+    const headerFixo = document.querySelector(".pagina-inicial-cabecalho-fixo");
+    
+    if (headerFixo) {
+        requestAnimationFrame(function () {
+            headerFixo.classList.add("header-show");
         });
-
-    },
-    {
-        threshold: 0.7
     }
-);
-
-
-statisticLines.forEach((line) => {
-
-    lineObserver.observe(line);
-
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+// ========================================
+// 3. ELEMENTOS COM CLASSE "REVEAL" - Animação ao entrar na tela
+// ========================================
+document.addEventListener("DOMContentLoaded", function () {
+    const revealElements = document.querySelectorAll(".reveal");
 
-    const linhas = document.querySelectorAll(
-        ".linha-animada"
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15 }
     );
 
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
+    revealElements.forEach((element) => {
+        revealObserver.observe(element);
+    });
+});
 
+// ========================================
+// 4. LINHAS ANIMADAS - Animação ao entrar na tela
+// ========================================
+document.addEventListener("DOMContentLoaded", function () {
+    const statisticLines = document.querySelectorAll(".americana-shopping-estatisticas-card > hr");
+
+    const lineObserver = new IntersectionObserver(
+        (entries) => {
             entries.forEach((entry) => {
-
                 if (entry.isIntersecting) {
-
-                    entry.target.classList.add("ativa");
-
-                    // Anima somente uma vez
-                    observer.unobserve(entry.target);
+                    entry.target.classList.add("show");
+                    lineObserver.unobserve(entry.target);
                 }
-
             });
-
         },
-        {
-            threshold: 0.7
-        }
+        { threshold: 0.7 }
+    );
+
+    statisticLines.forEach((line) => {
+        lineObserver.observe(line);
+    });
+});
+
+// ========================================
+// 5. LINHAS HORIZONTAIS - Animação ao entrar na tela
+// ========================================
+document.addEventListener("DOMContentLoaded", function () {
+    const linhas = document.querySelectorAll(".linha-animada");
+
+    const linhaObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("ativa");
+                    linhaObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.7 }
     );
 
     linhas.forEach((linha) => {
-        observer.observe(linha);
+        linhaObserver.observe(linha);
     });
-
 });
 
+// ========================================
+// 6. BOTÕES - Animação de entrada suave
+// ========================================
 document.addEventListener("DOMContentLoaded", function () {
-
     const botoes = document.querySelectorAll(".botao-entrada");
 
-
-    botoes.forEach(function (botao) {
-
+    botoes.forEach((botao) => {
         requestAnimationFrame(function () {
-
             botao.classList.add("show");
-
         });
-
     });
-
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const header = document.querySelector(
-        ".pagina-inicial-cabecalho-fixo"
-    );
-
-    if (!header) {
-        return;
-    }
-
-    requestAnimationFrame(function () {
-
-        header.classList.add("header-show");
-
-    });
-
 });

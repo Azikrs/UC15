@@ -748,14 +748,12 @@ button {
     opacity: 1;
 }
 
-.americana-shopping-estatisticas-card-conteudo img {
-    filter: invert(1);
-}
 .americana-shopping-descricao {
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 100px;
+    background-image: linear-gradient(to bottom, #fff, #f3f5f5);
 }
 
 .americana-shopping-descricao-hero {
@@ -941,13 +939,12 @@ button {
 }
 
 .americana-shopping-localizacao {
-    padding-top: 150px;
+    padding: 150px 15px 100px;
     display: flex;
-    max-width: 1500px;
-    width: 90%;
     margin: auto;
     justify-content: center;
     gap: 175px;
+    background-image: linear-gradient(to bottom, #fff, #f3f5f5);
 }
 
 .americana-shopping-localizacao-hero {
@@ -1123,8 +1120,73 @@ button {
 .americana-shopping-localizacao-conteudo-card p {
     line-height: 1.2;
     font-size: 16px;
-    width: 500px;
+    width: 600px;
     color: #3a3a3a;
+}
+
+.americana-shopping-gastronomia-hero {
+    padding: 100px 0px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.americana-shopping-gastronomia-hero p{
+    letter-spacing: -0.5px;
+    line-height: 0;
+    font-family: 'roboto mono';
+    font-weight: 400;
+    font-size: 14px;
+    color: #0B4656;
+}
+
+.americana-shopping-gastronomia-hero h1 {
+    letter-spacing: -9px;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 120px;
+    color: #0B4656;
+}
+
+.americana-shopping-gastronomia-hero h2 {
+    max-width: 1000px;
+    width: 80%;
+    color: #5e5e5e;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    margin: auto;
+}
+
+.americana-shopping-gastronomia-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    background-color: #0b4656;
+    background-size: contain;
+  
+    /* Substitua pelo caminho correto da sua imagem */
+    background-image: url('../img/6035801-textura-de-fundo-quadrado-abstrato-branco-e-cinza-gratis-vetor.jpg');
+    
+    /* Garante que a textura vai se repetir por todo o fundo */
+    background-repeat: repeat;
+    
+    /* Faz a mágica da mesclagem acontecer */
+    background-blend-mode: multiply;
+    background-size: 700px; 
+}
+
+.americana-shopping-gastronomia-conteudo h1{
+    letter-spacing: -4px;
+    font-weight: 600;
+    font-size: 65px;
+    color: #f3f5f5;
+    text-align: center;
+
 }
 
 body {

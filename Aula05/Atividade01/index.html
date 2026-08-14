@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/AccordionGallery.css">
+    <link rel="stylesheet" href="css/FlowingMenu.css">
     <link rel="shortcut icon" href="img/Icon Americana Shopping.png" type="image/x-icon">
     <title>Shopping Americana</title>
 </head>
@@ -109,8 +110,7 @@
             </div>
         </div>
 
-        <div class="linha-animada">
-        </div>  
+        <div class="linha-animada"></div>
         
         <section class="americana-shopping-descricao-cards">
             <div class="americana-shopping-descricao-cards-conteudo">
@@ -137,6 +137,9 @@
         
         <img src="../Atividade01/img/Americana shopping imagem.png" class="americana-shopping-descricao-imagem">
 
+        <div>
+        </div>
+
     </div>
 
     <hr class="hr-lojas-768">
@@ -159,7 +162,7 @@
 
     <div class="americana-shopping-localizacao">
         <div class="americana-shopping-localizacao-hero">
-            <h2 class="reveal">Local</h2>
+            <h2 class="reveal">local</h2>
             <h1 class="reveal">Localização.</h1>
             <p class="reveal">Conectado às rodovias e a poucos minutos do centro, o shopping traz a conveniência de um acesso direto no eixo principal da Nossa Senhora de Fátima.</p>
             <section class="americana-shopping-localizacao-conteudo">
@@ -196,11 +199,28 @@
             </a>
         </div>
     </div>
+
+    <div class="americana-shopping-gastronomia">
+        <div class="americana-shopping-gastronomia-hero">
+            <p class="reveal">gastronomia</p>
+            <h1 class="reveal">Do almoço ao jantar.</h1>
+            <h2 class="reveal">A praça de alimentação e os restaurantes do Americana Shopping oferecem opções para todos os momentos e gostos, do almoço em família ao lanche rápido da tarde. Confira a lista completa dos nossos estabelecimentos, escolha onde comer e aproveite uma experiência deliciosa na sua visita!</h2>
+        </div>
+
+        <div class="americana-shopping-gastronomia-conteudo">
+            <h1 class="reveal">Conte  com  grandes  nomes  aqui.</h1>
+        </div>
+        
+        <div id="flowing-menu-root" style="height: 800px; position: relative; z-index: 1000;"></div>
+
+    </div>
+
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel" src="components/AccordionGallery.js"></script>
     <script src="components/script.js"></script>
+    <script type="text/babel" src="components/FlowingMenuScript.js"></script>
 </body>
 </html>
