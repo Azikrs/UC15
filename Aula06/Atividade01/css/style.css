@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter';
+}
+
+.logo {
+    width: 200px;
+}
+
+#pagina-home {
+    height: 613px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.863),
+                      rgba(0, 0, 0, 0.123)), url(../img/Banner.png);
+    background-size: cover;
+}
+
+.categoria {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 75px;
+}
+
+.categoria ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.categoria a {
+    border: 1px solid #fff;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+}
+
+.categoria a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.conteudo-banner {
+    padding: 50px 0px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    max-width: 690px;
+    width: 70%;
+    margin: auto;
+    font-size: 30px;
+    color: #fff;
+}
+
+.conteudo-banner-botoes {
+    max-width: 700px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.conteudo-banner-botoes a {
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 600;
+    width: 300px;
+    padding: 10px 0px;
+    color: #fff;
+    border: 3px solid #fff;
+}
+
+.conteudo-banner-botoes a:hover {
+    color: black;
+    background-color: #fff;
+}
