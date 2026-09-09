@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+table {
+    font-size:16px;
+    width: 70%;
+    height: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+td {
+    border: 1px solid #000;
+}
+th {
+    padding:10px 15px;
+    border: 1px solid #000;
+    background-color: #ca5050;
+}
+
+.linha-1 {
+    background-color: #ffc7b6;
+}
+
+.linha-2 {
+    background-color: #f7e1d7;
+}   
