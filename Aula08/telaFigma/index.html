@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Cadastro Anime</title>
+</head>
+<body>
+    <div class="conteiner">
+        <form method="post">
+            <div class="titulo">
+                <h1>Cadastro Anime</h1>
+                <p>cadastre as informações de acordo com o que o campo pede.</p>
+            </div>
+            
+            <hr>
+            <div>
+                <input type="text" placeholder="Título do anime" id="titulo" required>
+                <input type="text" placeholder="Quantidade de episódios" id="episodio" required>
+                <input type="text" placeholder="Descrição" id="descricao" required>
+                <input type="text" placeholder="Autor" id="autor" required>
+            </div>
+
+            <button type="button" onclick="validar()">Acessar</button>
+        </form>
+    </div>
+
+    <div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
