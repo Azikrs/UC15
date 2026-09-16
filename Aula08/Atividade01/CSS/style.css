@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans", sans-serif;
+}
+
+main {
+    background-image: url(../IMG/lptr5yzxarse1.png), linear-gradient(to top, #fff, #000);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner-login {
+    background-color: #fdfdfd71;
+    height: 60vh;
+    border-radius: 10px;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 25vw;
+}
+
+form h1 {
+    color: #0099ff;
+    line-height: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.h1-top {
+    color: #38b0ff;
+    letter-spacing: 0px;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.h1-bottom {
+    color: #0099ff;
+
+    font-size:52px;
+    letter-spacing: -3px;
+    font-weight:600;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form div input {
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    width: 22vw;
+    background-color: #ffffff7c;
+    backdrop-filter: blur(2px);
+}
+
+form button {
+    width: 22vw;
+    border-radius: 10px;
+    background-color: #1884ff;
+    color: #fff;
+    font-size: 14px;
+    padding: 15px 0px;
+    border: none;
+    text-align: center;
+    transition: background 0.2s ease;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3292ff;
+}
+
+
+
+

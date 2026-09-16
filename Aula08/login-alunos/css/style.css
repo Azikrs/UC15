@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+}
+
+.caixa{
+
+    display: flex;
+    margin-left: 67vh;
+    margin-top: 18vh;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: rgba(220, 211, 211, 0.6);
+
+}
+
+body {
+    background-image: url(../img/bat-caverna.jpg);
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+button[type="button"]{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    padding: 15px 130px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+
+
+input[type="text"]{
+
+    padding: 10px 90px 10px 10px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 75px;
+}
+
+input[type="password"]{
+
+    padding: 10px 90px 10px 10px;
+    border-radius: 5px;
+    border: none;
+
+    width: 250px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 75px;
+}
+
+h1{
+    display: flex;
+    padding: 20px 0px 0px 25px ;
+    margin: 30px;
+}
+
+
+.senha{
+    display: flex;
+    padding: 0px 0px 0px 110px;
+    margin: 30px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.6);
+    font: italic;
+}
+
