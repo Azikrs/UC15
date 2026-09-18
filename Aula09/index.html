@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Authora</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <section class="comeco-cabecalho">
+            <img src="../Aula09/IMG/Authora.logopretolaranja.jpg" width="120">
+            <p>Cadastrar</p>
+        </section>
+
+        <section class="fim-cabecalho">
+            <img src="IMG/join.png" width="15">
+            <p>Login</p>
+        </section>
+    </header>
+
+    <main class="cadastro">
+        <h1>Cadastro de novo usuário</h1>
+        <div class="conteiner">
+            <div class="colunas">
+                <div class="coluna">
+                    <p>Dados pessoais:</p>
+                    <hr>
+                    <div class="input">
+                        <p>Nome</p>
+                        <input type="text" id="nome" required>
+                    </div>
+
+                    <div class="input">
+                        <p>Documento (CPF/CNPJ)</p>
+                        <input type="text" id="documento" required>
+                    </div>
+
+                    <div class="input">
+                        <p>Email</p>
+                        <input type="email" id="documento" required>
+                    </div>
+
+                    <div class="input">
+                        <p>Empresa</p>
+                        <input type="text" id="empresa" required>
+                    </div>
+
+                    <div class="input">
+                        <p>Telefone</p>
+                        <input type="tel" id="telefone" required>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox">
+                        <p>Já sou cliente da LDSOFT</p>
+                    </div>
+                </div>
+
+                <div class="coluna">
+                    <p>Dados de acesso:</p>
+                    <hr>
+                    <div class="input">
+                        <p>Login</p>
+                        <input type="text" id="login" required>
+                    </div>
+
+                    <div class="input">
+                        <p>Senha</p>
+                        <input type="password" id="senha" required>
+                    </div>
+
+                    <div class="input">
+                        <p>Confirmar Senha</p>
+                        <input type="email" id="confSenha" required>
+                    </div>
+
+                    <div class="select">
+                        <p>Tipo de pessoa</p>
+
+                        <select id="pessoa">
+                            <option>Selecione</option>
+                            <option>Pessoa Física</option>
+                            <option>Pessoa Jurídica - Escritório de Adv/PI</option>
+                            <option>Pessoa Jurídica - Empresa</option>
+                        </select>
+                    </div>
+
+                    <div class="select">
+                        <p>Tipo de pessoa</p>
+
+                        <select id="interesse">
+                            <option>Selecione</option>
+                            <option>Canções</option>
+                            <option>Expressão de propaganda</option>
+                            <option>Fotos e ilustrações</option>
+                            <option>Direto da moda</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox">
+                        <p>
+                            Eu aceito os
+                            <a href="#">termos de uso</a>
+                            do sistema
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="botoes">
+                <button class="salvar">Salvar</button>
+
+                <button class="cancelar">Cancelar</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

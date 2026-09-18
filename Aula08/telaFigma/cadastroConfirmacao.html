@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/cadastroConfirmacao.css">
+    <title>Cadastro Confirmação</title>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="conteiner-conteudo">
+            <div class="titulo">
+                <h1>Cadastro Anime</h1>
+                <p>Confirme se as informações abaixo estão corretas.</p>
+            </div>
+            
+            <hr>
+            <div class="infos">
+                <p><strong>Título:</strong> <span id="conf-titulo"></span></p>
+                <p><strong>Episódios:</strong> <span id="conf-episodio"></span></p>
+                <p><strong>Descrição:</strong> <span id="conf-descricao"></span></p>
+                <p><strong>Autor:</strong> <span id="conf-autor"></span></p>
+            </div>
+            
+            <div class="botoes">
+                <button type="button" class="validar" onclick="confirmar()">Concluir Cadastro</button>
+                <button type="button" class="voltar" onclick="voltar()">Voltar</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
