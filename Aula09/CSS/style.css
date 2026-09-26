@@ -8,7 +8,15 @@
     box-sizing: border-box;
 }
 
+html,
 body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: #f7f7f7;
 }
 
@@ -19,11 +27,11 @@ body {
     z-index: 10;
     width: 100%;
     background:#fff;
-    padding: 7px 0px;
     font-size: 14px;
     color: #ff6600;
     box-shadow: 0px 1px 10px #2020201f;
 }
+
 .cabecalho-conteudo {
     max-width: 1200px;
     width: 95%;
@@ -36,10 +44,43 @@ body {
     display: flex;
     align-items: center;
 }
+
+.comeco-cabecalho a {
+    text-decoration: none;
+    color: #ff6600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.15s ease all;
+}
+
+.comeco-cabecalho a {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    color: #ff5a00;
+    text-decoration: none;
+}
+
+.comeco-cabecalho a.ativo {
+    border-bottom: 2px solid #ff5a00;
+}
+
 .fim-cabecalho {
     display: flex;
-    gap:10px;
     align-items: center;
+}
+
+.fim-cabecalho a {
+    text-decoration: none;
+    color: #ff6600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fim-cabecalho a:hover{
+    text-decoration: underline;
 }
 
 .cadastro {
@@ -222,4 +263,13 @@ body {
     cursor: pointer;
     color: #ff6600;
     background-color: #fff;
+}
+
+.rodape {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 0px;
 }
