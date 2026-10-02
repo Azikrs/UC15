@@ -1,11 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     min-height: 100vh;
 }
 
 .container-fluid {
-    padding: 0px 100px;
+    max-width: 1200px;
+    width: 95%;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    color: #fd9d0d;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.navbar-brand:hover {
+    color: #e68a00;
 }
 
 .carousel-inner img{
@@ -13,4 +26,235 @@ body {
     object-position: center;
     width: 100%;
     height: 60vh;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.col {
+    position: relative; /* Define o limite para o posicionamento absoluto do filho */
+    height: 300px;
+    width: 300px;
+}
+
+.col img {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    object-fit: cover;  /* Cobre o container sem distorcer a imagem */
+    transition: scale 0.2s ease,
+                filter 0.2s ease;
+}
+
+.col p {
+    transition: opacity 0.2s ease;
+    opacity: 0;
+    z-index: 1;         
+    position: absolute; /* Retira o texto do fluxo normal da página */
+    top: 50%;           /* Move o texto para o meio da altura */
+    left: 50%;          /* Move o texto para o meio da largura */
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente o texto */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.col:hover p {
+    opacity: 1;
+}
+
+.col:hover img {
+    filter: brightness(70%) saturate(0%);
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+}
+
+.titulo {
+    text-align: center;
+    margin: 100px 0;
+}
+
+.titulo h1{
+    line-height: 1;
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.titulo p{
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.titulo h2{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.titulo h1 strong{
+    color: #fd9d0d;
+}
+
+.btn-primary {
+    background-color: #fd9d0d;
+    border-color: #fd9d0d;
+
+}
+
+.btn-primary:hover {
+    background-color: #e68a00;
+    border-color: #e68a00;
+}
+
+.btn-outline-success {
+    color: #fd9d0d;
+    border-color: #fd9d0d;
+}
+
+.btn-outline-success:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #fd9d0d;
+    border-color: #fd9d0d;
+}
+
+.me-2:focus {
+    box-shadow: 0px 0px 0px 3px #fd9d0d80;
+    border-color: #fd9d0d;
+}
+
+.card-body {
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-title {
+    padding: 10px 0px 15px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-size: 24px;
+}
+
+.card-text {
+    padding: 0px 0px 15px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card img {
+    transition: transform 0.3s cubic-bezier(.09,.69,.31,.93);
+}
+
+.card img:hover {
+    transform: scale(1.03);
+}
+
+.cards {
+    padding-bottom: 100px;
+}
+
+.nav-link.active {
+    color: #5e5e5e !important;
+    font-weight: 600;
+}
+
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0), #0099ffe8), url('../img/americana.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+}
+
+.banner-titulo {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.banner-titulo h1{
+    line-height: 1;
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.banner-titulo p{
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.banner-titulo h2{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.americana-descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.americana-descricao-texto {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.americana-descricao-texto img {
+    width: 400px;
+    height: 60vh;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position:left;
+}
+
+.americana-descricao h1{
+    padding:100px 0px;
+    line-height: 1;
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: -2px;
+}
+
+.americana-descricao p{
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.americana-descricao h1 strong{
+    color: #fd9d0d;
 }
