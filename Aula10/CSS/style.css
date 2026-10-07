@@ -182,7 +182,7 @@ body {
 }
 
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0), #0099ffe8), url('../img/americana.jpg');
+    background: linear-gradient(#8080804f, #00000075), url('../img/americana.jpg');
     background-size: cover;
     background-position: center;
     min-height: 50vh;
@@ -198,9 +198,9 @@ body {
 
 .banner-titulo h1{
     line-height: 1;
-    font-size: 120px;
+    font-size: 70px;
     font-weight: 700;
-    letter-spacing: -2px;
+    letter-spacing: -5px;
 }
 
 .banner-titulo p{
