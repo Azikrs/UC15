@@ -1,0 +1,241 @@
+.banner {
+    background: linear-gradient(#80808000, #0000006b), url('../img/americana.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.banner-titulo {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.banner-titulo h1{
+    line-height: 1;
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: -5px;
+}
+
+.banner-titulo h1 strong{
+    color: #ff9e0c;
+}
+
+.banner-titulo p{
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.banner-titulo h2{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.cidades-descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 45%;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.cidades-descricao h1{
+    line-height: 1;
+    font-size: 90px;
+    font-weight: 700;
+    letter-spacing: -5px;
+}
+
+.cidades-descricao p{
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 20px;  
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.cidades-descricao h1 strong{
+    color: #ff9e0c;
+}
+
+.carousel-inner {
+    border-radius: 100px 5px;
+}
+
+.carousel-caption {
+    background-color: #00000075;
+    border-radius: 5px 100px;
+    padding: 20px;
+}
+
+.carousel-caption h5 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    padding-bottom: 20px;
+}
+
+.cidades-descricao-texto {
+    width: min(1440px, 90%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.cidades-descricao-texto h1 {
+    padding: 50px 0px;
+    line-height: 1;
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: -5px;
+}
+
+.cidades-descricao-texto h1 strong{
+    color: #ff9e0c;
+}
+
+.cards-cidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+}
+
+.imagem-card img {
+    height: 26vh;
+    width: auto;
+    object-fit: cover;
+}
+
+.btn-primary {
+    background-color: #3d6fcc;
+    border-color: #3d6fcc;
+}
+
+.cidades-pracas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 100px;
+    padding: 100px 0;
+}
+
+.cidades-pracas-titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cidades-pracas h2 {
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.cidades-pracas h1 {
+    line-height: 1;
+    font-size: 130px;
+    width: 70%;
+    font-weight: 700;
+    letter-spacing: -5px;
+}
+
+.cidades-pracas h1 strong {
+    color: #3d6fcc;
+}
+
+.cidades-pracas p {
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 20px;  
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+
+.imagem-card img{
+    height: 45vh;
+}
+
+.imagem-card {
+    overflow: hidden;
+}
+
+.imagem-card img {
+    filter: saturate(0%);
+    transition: transform 0.3s cubic-bezier(.09,.69,.31,.93),
+                filter 0.3s cubic-bezier(.09,.69,.31,.93);
+}
+
+.imagem-card img:hover {
+    filter: saturate(100%);
+    transform: scale(1.03);
+}
+
+.imagem-card {
+    height: auto;
+    width: 70vw;
+}
+
+.card-banner {
+    padding: 20px 0px;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.cards-pracas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 20px;
+}
+
+.card-banner h5 {
+    font-weight: 800;
+    letter-spacing: -3px;
+    font-size: 50px;
+    color: #3d6fcc;
+}
+
+.card-banner p {
+    color: #0000009f;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    width: 80%;
+    margin: 0 auto;
+}
