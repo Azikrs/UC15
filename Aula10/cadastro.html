@@ -37,6 +37,37 @@
             </div>
         </div>
     </nav>
+    <main class="container pagina-conteudo">
+        <div class="titulo">
+            <h2>Cadastro</h2>
+            <h1>Faça parte do <strong>Climatema.</strong></h1>
+            <p>Preencha seus dados abaixo. Cadastro demonstrativo, sem envio ou armazenamento de dados.</p>
+        </div>
+        <form id="formulario-cadastro" class="formulario-cadastro border rounded p-4 p-md-5">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome completo</label>
+                <input type="text" class="form-control" id="nome" name="nome" autocomplete="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="mb-4">
+                <label for="cidade" class="form-label">Cidade</label>
+                <select class="form-select" id="cidade" name="cidade" required>
+                    <option value="" selected disabled>Selecione sua cidade</option>
+                    <option value="americana">Americana</option>
+                    <option value="santa-barbara">Santa Bárbara d'Oeste</option>
+                    <option value="nova-odessa">Nova Odessa</option>
+                    <option value="holambra">Holambra</option>
+                    <option value="campinas">Campinas</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary w-100" disabled>Cadastrar</button>
+            <p id="cadastro-retorno" class="alert alert-success mt-4 mb-0 d-none" role="status">Formulário validado com sucesso! Este cadastro é demonstrativo; nenhum dado foi enviado ou salvo.</p>
+            <noscript><p class="alert alert-warning mt-3 mb-0">Ative o JavaScript para usar o formulário demonstrativo.</p></noscript>
+        </form>
+    </main>
     <script src="JS/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>

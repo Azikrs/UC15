@@ -1,5 +1,5 @@
 .banner {
-    background: linear-gradient(#80808000, #0000006b), url('../img/americana.jpg');
+    background: linear-gradient(#80808000, #0000006b), url('../IMG/Americana.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -118,6 +118,7 @@
 }
 
 .cards-cidades {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -238,4 +239,117 @@
     letter-spacing: -1px;
     width: 80%;
     margin: 0 auto;
+}
+
+.cidades-complemento {
+    padding-bottom: 100px;
+}
+
+.cidades-complemento .titulo {
+    margin-top: 0;
+}
+
+.cidades-complemento .titulo h1 strong {
+    color: #3d6fcc;
+}
+
+.cards-cidades .card {
+    max-width: 100%;
+}
+
+.cards-cidades .card-img-top {
+    height: 260px;
+    object-fit: cover;
+}
+
+.galeria-cidades img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.galeria-cidades figcaption {
+    padding-top: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.mapas-cidades .ratio {
+    min-height: 320px;
+}
+
+@media (max-width: 991.98px) {
+    .banner-titulo, .cidades-descricao {
+        width: 90%;
+    }
+
+    .banner-titulo p, .cidades-descricao > p, .cidades-pracas-titulo > p {
+        width: 85%;
+    }
+
+    .cidades-descricao-texto h1, .cidades-pracas h1 {
+        font-size: 70px;
+        letter-spacing: -3px;
+    }
+
+    .cidades-pracas h1, .imagem-card {
+        width: 90%;
+    }
+
+    .cards-pracas {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .banner-titulo h1, .cidades-descricao h1,
+    .cidades-descricao-texto h1, .cidades-pracas h1 {
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    .banner-titulo, .cidades-descricao {
+        padding: 60px 0;
+    }
+
+    .banner-titulo p, .cidades-descricao p, .card-banner p {
+        font-size: 17px;
+        width: 90%;
+    }
+
+    .carousel-inner, .carousel-caption {
+        border-radius: 35px 5px;
+    }
+
+    .carousel-caption {
+        left: 10%;
+        right: 10%;
+        padding: 15px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 24px;
+        letter-spacing: -1px;
+    }
+
+    .carousel-caption p {
+        padding: 0;
+    }
+
+    .card-banner h5 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    .cards-cidades, .cards-pracas {
+        padding: 0;
+        gap: 30px;
+    }
+
+    .cidades-pracas {
+        gap: 40px;
+        padding: 60px 0;
+    }
 }

@@ -181,3 +181,45 @@ body {
     font-weight: 600;
 }
 
+.pagina-conteudo {
+    padding-bottom: 100px;
+}
+
+.pagina-conteudo .titulo {
+    margin: 80px 0 60px;
+}
+
+.card-previsao .card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-previsao .card-body {
+    justify-content: flex-start;
+}
+
+.formulario-cadastro {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.formulario-cadastro .form-control:focus,
+.formulario-cadastro .form-select:focus {
+    border-color: #fd9d0d;
+    box-shadow: 0 0 0 3px #fd9d0d80;
+}
+
+@media (max-width: 575.98px) {
+    .pagina-conteudo .titulo, .cidades-complemento .titulo {
+        margin: 60px 0 40px;
+    }
+
+    .pagina-conteudo .titulo h1, .cidades-complemento .titulo h1 {
+        font-size: 42px;
+    }
+
+    .pagina-conteudo .titulo p, .cidades-complemento .titulo p {
+        font-size: 17px;
+    }
+}
+
