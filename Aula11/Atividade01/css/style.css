@@ -34,6 +34,8 @@ header img {
 header p {
     width: 60vw;
     margin: auto;
+    color: rgb(16, 16, 82);
+
 }
 
 main {
@@ -89,4 +91,6 @@ button img {
     padding: 0px 25px;
     font-size: 14px;
     text-align: center;
+    color: rgb(16, 16, 82);
+
 }
